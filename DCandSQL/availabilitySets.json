@@ -7,6 +7,9 @@
     },
     "adAvailabilitySetName": {
       "type": "string"
+    },
+    "sqlAvailabilitySetName": {
+      "type": "string"
     }
   },
   "resources": [
@@ -15,6 +18,12 @@
       "name": "[parameters('adAvailabilitySetName')]",
       "apiVersion": "2015-06-15",
       "location": "[parameters('location')]"
+    },
+    {
+      "apiVersion": "2015-06-15",
+      "location": "[parameters('location')]",
+      "name": "[parameters('sqlAvailabilitySetName')]",
+      "type": "Microsoft.Compute/availabilitySets"
     }
   ],
   "outputs": {}
