@@ -19,6 +19,24 @@
     },
     "adRDPNATRuleID": {
       "type": "string"
+    },
+    "sqlNicName": {
+      "type": "string"
+    },
+    "sqlSubnetRef": {
+      "type": "string"
+    },
+    "sqlBEAddressPoolID": {
+      "type": "string"
+    },
+    "sqlRDPNATRuleID": {
+      "type": "string"
+    },
+    "LBBE": {
+      "type": "string"
+    },
+    "RDPNAT": {
+      "type": "string"
     }
   },
   "resources": [
@@ -51,7 +69,36 @@
           }
         ]
       }
-     }
+    },
+    {
+      "name": "[parameters('sqlNicName')]",
+      "type": "Microsoft.Network/networkInterfaces",
+      "location": "[parameters('location')]",
+      "apiVersion": "2015-06-15",
+      "properties": {
+        "ipConfigurations": [
+          {
+            "name": "ipconfig1",
+            "properties": {
+              "privateIPAllocationMethod": "Dynamic",
+              "subnet": {
+                "id": "[parameters('sqlSubnetRef')]"
+              },
+              "loadBalancerBackendAddressPools": [
+                {
+                  "id": "[parameters('sqlBEAddressPoolID')]"
+                }
+              ],
+              "loadBalancerInboundNatRules": [
+                {
+                  "id": "[parameters('sqlRDPNATRuleID')]"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
   ],
   "outputs": {}
 }
