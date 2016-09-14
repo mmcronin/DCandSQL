@@ -14,10 +14,10 @@
   },
   "resources": [
     {
-      "type": "Microsoft.Compute/availabilitySets",
-      "name": "[parameters('adAvailabilitySetName')]",
       "apiVersion": "2015-06-15",
-      "location": "[parameters('location')]"
+      "location": "[parameters('location')]",
+      "name": "[parameters('adAvailabilitySetName')]",
+      "type": "Microsoft.Compute/availabilitySets"
     },
     {
       "apiVersion": "2015-06-15",

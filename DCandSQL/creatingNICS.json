@@ -32,6 +32,9 @@
     "sqlRDPNATRuleID": {
       "type": "string"
     },
+    "LBBE": {
+      "type": "string"
+    },
     "RDPNAT": {
       "type": "string"
     }
