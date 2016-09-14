@@ -83,7 +83,7 @@
       "metadata": {
         "description": "The size of the SQL VM Created"
       },
-      "defaultValue": "Standard_DS2"
+      "defaultValue": "Standard_DS2_V2"
     },
     "sqlServerServiceAccountUserName": {
       "type": "string",
