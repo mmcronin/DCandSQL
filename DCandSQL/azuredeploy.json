@@ -77,7 +77,7 @@
         "artifactsBaseUrl": "",
         "description": "URL to acquire other templates"
       },
-      "defaultValue": "https://raw.githubusercontent.com/mmcronin/DC-Single-VNET/master/DC"
+      "defaultValue": "https://raw.githubusercontent.com/mmcronin/DCandSQL/master/DCandSQL"
     },
     "storageAccountNamePrefix": {
       "type": "string",
