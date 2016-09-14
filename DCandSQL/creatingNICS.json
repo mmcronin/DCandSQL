@@ -31,9 +31,6 @@
     },
     "sqlRDPNATRuleID": {
       "type": "string"
-    },
-    "RDPNAT": {
-      "type": "string"
     }
   },
   "resources": [
